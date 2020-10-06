@@ -13,7 +13,7 @@ An exercise to get at ease with HTTP responses in shiny.
 
 Start from the application we put together previously (below). The application serves some data over HTTP, run it to refresh your memory.
 
-```r
+```{r}
 library(shiny)
 
 ui <- fluidPage(
@@ -80,7 +80,7 @@ Run the application below, it comes with a simple but convenient interface for y
 
 <strong>Note</strong> The `filterFunc` is at the top of the code chunk, you should only need to make edit there.
 
-```r
+```{r}
 library(shiny)
 
 # this is the filter function
