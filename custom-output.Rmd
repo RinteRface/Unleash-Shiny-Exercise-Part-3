@@ -33,7 +33,7 @@ box <- function(data, title, value){
   if(missing(value)) stop("missing value")
 
   # select the columns
-  dplyr::select(data, title = {{title}}, value = {{value}})
+  dplyr::select(data, title = ..., value = ...)
 }
 ```
 
@@ -95,7 +95,7 @@ renderBox <- function(expr, session = shiny::getDefaultReactiveDomain()) {
 
 ## Test
 
-Test the custom output: fingers' crossed!
+Fill in the `...` in the `box` function in the application below then test it: fingers' crossed!
 
 ```{r}
 library(shiny)
@@ -115,7 +115,7 @@ ui <- bulmaPage(
 
 server <- function(input, output){
   output$test <- renderBox({
-    box(boxes, name, val)
+    box(boxes, ..., ...)
   })
 }
 
