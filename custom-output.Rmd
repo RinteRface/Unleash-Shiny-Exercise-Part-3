@@ -66,7 +66,7 @@ You can attach dependencies with `tagList` or `attachDependencies` from the {htm
 
 ## renderBox
 
-Now onto the `renderBox` function. As we've explored, it should itself return a `function`, this function should send the path to the JavaScript binding so it can be read and generate the output. The only problem is that it is not done, no response is served: use `shiny:::httpResponse` below to fix that (again the missing code is indicated by the `...`).
+Now onto the `renderBox` function. As we've explored, it should itself return a `function`, this function should send the path to the JavaScript binding where it will be read to generate the output. The only problem is that it is not done, no response is served: use `shiny:::httpResponse` below to fix that (again the missing code is indicated by the `...`).
 
 _Feel free to go back to the previous exercise to remember how it's done_
 
