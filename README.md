@@ -4,5 +4,5 @@
 
 1. `http-intro.R` - code along!
 2. `http-exercise` - exercise
-3. `output` - the final product
+3. `custom-output` - the final product
 
