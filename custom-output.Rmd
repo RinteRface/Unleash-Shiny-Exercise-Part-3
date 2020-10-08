@@ -37,11 +37,13 @@ box <- function(data, title, value){
 }
 ```
 
-_Above we use `dplyr` if you are not comfortable with it feel free to use something else, but make sure the output remains identical (a data.frame with `title` and `value`)_
+_HELP: Above we use `dplyr` if you are not comfortable with it feel free to use something else, but make sure the output remains identical (a data.frame with `title` and `value`)_
 
 ## boxOutput
 
-Now we need to build the `boxOutput` function, this function is destined for the shiny UI and will allow you to choose where the "box" will be placed. The function below is incomplete, fill the `...`.
+Now we need to build the `boxOutput` function, this function is destined for the shiny UI and will allow you to choose where the "box" will be placed. Note the use of the `box` class which we will need later on (in JavaScript).
+
+The function below is incomplete, fill the `...`.
 
 ```{r}
 boxOutput <- function(id){
@@ -57,12 +59,11 @@ boxOutput <- function(id){
   )
 
   # attach the dependencies
-  # (tagList / attachDependencies)
  ...
 }
 ```
 
-You can attach dependencies with `tagList` or `attachDependencies` from the {htmltools} package.
+HINT: You can attach dependencies with one of two functions from the {htmltools} package.
 
 ## renderBox
 
@@ -117,7 +118,7 @@ ui <- bulmaPage(
 
 server <- function(input, output){
   output$test <- renderBox({
-    box(boxes, ..., ...)
+    box(boxes, title = ..., value = ...)
   })
 }
 
