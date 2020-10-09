@@ -69,7 +69,7 @@ HINT: You can attach dependencies with one of two functions from the {htmltools}
 
 Now onto the `renderBox` function. As we've explored, it should itself return a `function`, this function should send the path to the JavaScript binding where it will be read to generate the output. The only problem is that it is not done, no response is served: use `shiny:::httpResponse` below to fix that (again the missing code is indicated by the `...`).
 
-_Feel free to go back to the previous exercise to remember how it's done_
+_Feel free to go back to the previous exercise (`http-exercise.Rmd`) to remind yourself how it was done_
 
 ```{r}
 renderBox <- function(expr, session = shiny::getDefaultReactiveDomain()) {
