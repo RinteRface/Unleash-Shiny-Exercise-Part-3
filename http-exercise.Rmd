@@ -74,7 +74,14 @@ The original application has been slightly modified:
 2. Assigns it to an object named `query`
 3. Prints the `query` object
 
-What we would like you to do is to make use of this to pass a URL parameter that allows returning only a specific column, e.g.: `http://127.0.0.1:3000/xxxXxXxXX/dataobj/cars-data?column=qsec` (instead of returning the entire dataset).
+What we would like you to do is to make use of this to pass a URL parameter that allows __returning only a specific column__, e.g.: `http://127.0.0.1:3000/xxxXxXxXX/dataobj/cars-data?column=qsec` (instead of returning the entire dataset).
+
+As a reminder here are some column names of the `mtcars` are:
+
+- `mpg`
+- `qsec`
+- `disp`
+- `drat`
 
 Run the application below, it comes with a simple but convenient interface for you to add parameters to the URL parameters and test that it works.
 
@@ -110,7 +117,7 @@ ui <- fluidPage(
   h1("2. Visit the endpoint"),
   p("Visit the endpoint", strong("and its parameter(s)"), "by clicking the button"),
   h4("Add the URL parameter and click the button"),
-  uiOutput("intro")
+  uiOutput("generatedPath")
 )
 
 server <- function(input, output, session){
@@ -123,7 +130,7 @@ server <- function(input, output, session){
 
   # this is just for convenience
   # no need to look here 
-  output$intro <- renderUI({
+  output$generatedPath <- renderUI({
 
     if(input$name != "" & input$value != "")
       path <- sprintf("%s&%s=%s", path, input$name, input$value)
