@@ -2,7 +2,6 @@
 
 ### Content
 
-1. `http-intro.R` - code along!
-2. `http-exercise` - exercise
-3. `custom-output` - the final product
+1. `http-exercise` - exercise
+2. `custom-output` - the final product
 
